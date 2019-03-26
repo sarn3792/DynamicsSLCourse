@@ -1,0 +1,8 @@
+c:\users\sramirez\documents\visual studio 2013\Projects\Course\DynamicsSLApplication1\obj\Debug\DynamicsSLApplication1.Form1.resources
+c:\users\sramirez\documents\visual studio 2013\Projects\Course\DynamicsSLApplication1\obj\Debug\DynamicsSLApplication1.Resources.resources
+c:\users\sramirez\documents\visual studio 2013\Projects\Course\DynamicsSLApplication1\obj\Debug\XU.N001-CursoVBTools.vbproj.GenerateResource.Cache
+c:\users\sramirez\documents\visual studio 2013\Projects\Course\DynamicsSLApplication1\bin\XUN001.exe
+c:\users\sramirez\documents\visual studio 2013\Projects\Course\DynamicsSLApplication1\bin\XUN001.pdb
+c:\users\sramirez\documents\visual studio 2013\Projects\Course\DynamicsSLApplication1\obj\Debug\XUN001.exe
+c:\users\sramirez\documents\visual studio 2013\Projects\Course\DynamicsSLApplication1\obj\Debug\XUN001.pdb
+C:\Users\sramirez\documents\visual studio 2013\Projects\Course\DynamicsSLApplication1\obj\Debug\XU.N001-CursoVBTools.vbprojResolveAssemblyReference.cache
