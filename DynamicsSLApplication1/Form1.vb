@@ -81,7 +81,7 @@ Friend Class Form1
         'al dejar el focus de la línea
         Select Case Action
             Case INSERTED
-                bxBillableSRamirez.Crtd_DateTime = GetAuditDateTime()
+                bxBillableSRamirez.Crtd_DateTime = GetAuditDateTime() 'Date and hours
                 bxBillableSRamirez.Crtd_Prog = bpes.ScrnNbr
                 bxBillableSRamirez.Crtd_User = bpes.UserId
             Case UPDATED
@@ -103,4 +103,5 @@ Friend Class Form1
             GetAuditDateTime = 0
         End Try
     End Function
+
 End Class

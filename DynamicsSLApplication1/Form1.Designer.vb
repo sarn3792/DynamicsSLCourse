@@ -210,6 +210,7 @@
         Me.txtSalesPersonId.Location = New System.Drawing.Point(128, 32)
         Me.txtSalesPersonId.Mask = "xxxxxxxxxx"
         Me.txtSalesPersonId.Name = "txtSalesPersonId"
+        Me.txtSalesPersonId.PV = """xSalespersonID_PV_sramirez"", "
         Me.txtSalesPersonId.Size = New System.Drawing.Size(252, 26)
         Me.txtSalesPersonId.TabIndex = 2
         Me.txtSalesPersonId.TextLength = 10
