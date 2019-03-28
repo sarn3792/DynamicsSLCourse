@@ -44,6 +44,10 @@
         Me.txtName_0 = New Microsoft.Dynamics.SL.Controls.DSLMaskedText()
         Me.lblName_0 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtComision_1 = New Microsoft.Dynamics.SL.Controls.DSLFloat()
+        Me.txtName_1 = New Microsoft.Dynamics.SL.Controls.DSLMaskedText()
+        Me.lblComision_1 = New System.Windows.Forms.Label()
+        Me.lblNombre_1 = New System.Windows.Forms.Label()
         Me.lblDescription_1 = New System.Windows.Forms.Label()
         Me.txtDescription = New Microsoft.Dynamics.SL.Controls.DSLMaskedText()
         Me.lblHoursWorked_1 = New System.Windows.Forms.Label()
@@ -65,7 +69,7 @@
         Me.Update1.Font = New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Update1.Image = CType(resources.GetObject("Update1.Image"), System.Drawing.Image)
         Me.Update1.Levels = "Customer;N,xBillableSRamirez;D"
-        Me.Update1.Location = New System.Drawing.Point(757, 12)
+        Me.Update1.Location = New System.Drawing.Point(899, 12)
         Me.Update1.Name = "Update1"
         Me.Update1.Size = New System.Drawing.Size(25, 25)
         Me.Update1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -117,6 +121,10 @@
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtComision_1)
+        Me.GroupBox1.Controls.Add(Me.txtName_1)
+        Me.GroupBox1.Controls.Add(Me.lblComision_1)
+        Me.GroupBox1.Controls.Add(Me.lblNombre_1)
         Me.GroupBox1.Controls.Add(Me.lblDescription_1)
         Me.GroupBox1.Controls.Add(Me.txtDescription)
         Me.GroupBox1.Controls.Add(Me.lblHoursWorked_1)
@@ -128,10 +136,54 @@
         Me.GroupBox1.Controls.Add(Me.gvxBillable)
         Me.GroupBox1.Location = New System.Drawing.Point(42, 138)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(707, 322)
+        Me.GroupBox1.Size = New System.Drawing.Size(843, 406)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Hours worked - (F4 para tabla / forma)"
+        '
+        'txtComision_1
+        '
+        Me.txtComision_1.Enabled = False
+        Me.txtComision_1.FieldName = """bSalesperson.CmmnPct""; 0; 0; 0"
+        Me.txtComision_1.Heading = "% comisión"
+        Me.txtComision_1.Level = "1"
+        Me.txtComision_1.Location = New System.Drawing.Point(128, 266)
+        Me.txtComision_1.Min = 0.0R
+        Me.txtComision_1.Name = "txtComision_1"
+        Me.txtComision_1.Size = New System.Drawing.Size(119, 22)
+        Me.txtComision_1.TabIndex = 15
+        Me.txtComision_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtName_1
+        '
+        Me.txtName_1.Enabled = False
+        Me.txtName_1.FieldName = """bSalesperson.Name""; 0; 0; 0"
+        Me.txtName_1.Heading = "Nombre vendedor"
+        Me.txtName_1.Level = "1"
+        Me.txtName_1.Location = New System.Drawing.Point(128, 226)
+        Me.txtName_1.Mask = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        Me.txtName_1.Name = "txtName_1"
+        Me.txtName_1.Size = New System.Drawing.Size(213, 22)
+        Me.txtName_1.TabIndex = 14
+        Me.txtName_1.TextLength = 37
+        '
+        'lblComision_1
+        '
+        Me.lblComision_1.AutoSize = True
+        Me.lblComision_1.Location = New System.Drawing.Point(33, 266)
+        Me.lblComision_1.Name = "lblComision_1"
+        Me.lblComision_1.Size = New System.Drawing.Size(84, 17)
+        Me.lblComision_1.TabIndex = 13
+        Me.lblComision_1.Text = "% comisión:"
+        '
+        'lblNombre_1
+        '
+        Me.lblNombre_1.AutoSize = True
+        Me.lblNombre_1.Location = New System.Drawing.Point(55, 226)
+        Me.lblNombre_1.Name = "lblNombre_1"
+        Me.lblNombre_1.Size = New System.Drawing.Size(62, 17)
+        Me.lblNombre_1.TabIndex = 12
+        Me.lblNombre_1.Text = "Nombre:"
         '
         'lblDescription_1
         '
@@ -226,7 +278,7 @@
         '
         'gvxBillable
         '
-        Me.gvxBillable.Location = New System.Drawing.Point(486, 243)
+        Me.gvxBillable.Location = New System.Drawing.Point(624, 339)
         Me.gvxBillable.Name = "gvxBillable"
         Me.gvxBillable.OcxState = CType(resources.GetObject("gvxBillable.OcxState"), System.Windows.Forms.AxHost.State)
         Me.gvxBillable.Size = New System.Drawing.Size(198, 61)
@@ -239,7 +291,7 @@
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(794, 468)
+        Me.ClientSize = New System.Drawing.Size(936, 556)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txtName_0)
         Me.Controls.Add(Me.lblName_0)
@@ -275,5 +327,9 @@
     Friend WithEvents lblHoursWorked_1 As System.Windows.Forms.Label
     Friend WithEvents txtDescription As Microsoft.Dynamics.SL.Controls.DSLMaskedText
     Friend WithEvents lblDescription_1 As System.Windows.Forms.Label
+    Friend WithEvents txtName_1 As Microsoft.Dynamics.SL.Controls.DSLMaskedText
+    Friend WithEvents lblComision_1 As System.Windows.Forms.Label
+    Friend WithEvents lblNombre_1 As System.Windows.Forms.Label
+    Friend WithEvents txtComision_1 As Microsoft.Dynamics.SL.Controls.DSLFloat
 #End Region
 End Class

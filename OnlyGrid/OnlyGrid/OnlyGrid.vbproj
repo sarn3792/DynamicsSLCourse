@@ -5,11 +5,11 @@
     <ProjectType>Local</ProjectType>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E47CD593-A629-4BF4-A0B7-DA103C36AEBA}</ProjectGuid>
+    <ProjectGuid>{4E96577C-D1C3-4B54-B6CE-51B1E616052D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>DynamicsSLApplication1.My.MyApplication</StartupObject>
-    <RootNamespace>DynamicsSLApplication1</RootNamespace>
-    <AssemblyName>XUN001</AssemblyName>
+    <StartupObject>OnlyGrid.My.MyApplication</StartupObject>
+    <RootNamespace>OnlyGrid</RootNamespace>
+    <AssemblyName>OnlyGrid</AssemblyName>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -73,12 +73,6 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-	<Compile Include="C:\Program Files (x86)\Microsoft Dynamics\SL\Applications\VT\VB\APP\customer.dh.vb">
-      <Link>customer.dh.vb</Link>
-    </Compile>
-	<Compile Include="C:\Program Files (x86)\Microsoft Dynamics\SL\Applications\VT\VB\APP\xBillableSRamirez.dh.vb">
-      <Link>xBillableSRamirez.dh.vb</Link>
-    </Compile>
 	<Compile Include="C:\Program Files (x86)\Microsoft Dynamics\SL\Applications\VT\VB\APP\salesperson.dh.vb">
       <Link>salesperson.dh.vb</Link>
     </Compile>

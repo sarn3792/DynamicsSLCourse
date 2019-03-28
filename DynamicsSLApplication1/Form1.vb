@@ -30,6 +30,7 @@ Friend Class Form1
         Call ApplInit()
         Call Init_Customer(LEVEL0, True)
         Call Init_xBillableSRamirez(LEVEL1, True)
+        Call Init_Salesperson(NOLEVEL, False) ' No va a grabar, sólo va a consultar
         ' Call Set Address for the tables that will have fields displayed on the scree,
         ' or that you would like customization manager to be able to use
         'Call SetAddr(LEVEL0, "bxSLSample", bCustomer, nCustomer)
@@ -47,7 +48,7 @@ Friend Class Form1
         Call ScreenInit()
 
         'Tiene que ser después del ScreenInit()
-        MH_xBillableSRamirez = DetailSetup(CSR_xBillableSRamirez, gvxBillable, bxBillableSRamirez.AddressOf("LineNbr"), bxBillableSRamirez, CNULL, CNULL, CNULL)
+        MH_xBillableSRamirez = DetailSetup(CSR_xBillableSRamirez, gvxBillable, bxBillableSRamirez.AddressOf("LineNbr"), bxBillableSRamirez, bSalesperson, CNULL, CNULL)
 
         'Variables del skd
         'BPES: variable de 'sesión'
@@ -66,7 +67,7 @@ Friend Class Form1
     End Sub
 
     Private Sub txtCustomer_0_ChkEvent(ByRef ChkStrg As String, ByRef RetVal As Short) Handles txtCustomer_0.ChkEvent
-        serr_Customer = PVChkFetch1(CNULL, CSR_Customer, ChkStrg, bCustomer) 'Se le manda CNULL porque queremos que sea del mismo txtCustomer_0
+        serr_Customer = PVChkFetch1(CNULL, CSR_Customer, ChkStrg, bCustomer) 'Se le manda CNULL porque queremos que sea del mismo txtCustomer_0. Se llena el bCustomer, sólo tenía el valor el txt, para llenar el nombre
     End Sub
 
     Private Sub gvxBillable_LineGotFocusEvent(ByRef maintflg As Short, ByRef retval As Short) Handles gvxBillable.LineGotFocusEvent
@@ -103,5 +104,14 @@ Friend Class Form1
             GetAuditDateTime = 0
         End Try
     End Function
+
+    Private Sub Update1_UpdateEvent(Level As Short, InsertFlg As Short, LevelsDone As Short, LevelsLeft As Short, ByRef RetVal As Short) Handles Update1.UpdateEvent
+
+    End Sub
+
+    Private Sub txtSalesPersonId_ChkEvent(ByRef ChkStrg As String, ByRef RetVal As Short) Handles txtSalesPersonId.ChkEvent
+        serr_Salesperson = SqlFetch1(CSR_Salesperson, "EXEC xSalespersonID_PV_sramirez" & SParm(ChkStrg), bSalesperson)
+        ' serr_Salesperson = PVChkFetch1(txtSalesPersonId, CSR_Salesperson, ChkStrg, bSalesperson)
+    End Sub
 
 End Class
