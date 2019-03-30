@@ -40,6 +40,7 @@
         Me.Update1 = New Microsoft.Dynamics.SL.Controls.DSLUpdate()
         Me.SAFHelpProvider = New System.Windows.Forms.HelpProvider()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.chkSeleccionar_N = New Microsoft.Dynamics.SL.Controls.DSLCheck()
         Me.txtSalesPersonId_0 = New Microsoft.Dynamics.SL.Controls.DSLMaskedText()
         Me.lblSalesPersonID_1 = New System.Windows.Forms.Label()
         Me.txtComision_0 = New Microsoft.Dynamics.SL.Controls.DSLFloat()
@@ -47,6 +48,11 @@
         Me.lblComision_1 = New System.Windows.Forms.Label()
         Me.lblNombre_1 = New System.Windows.Forms.Label()
         Me.gvSalesperson = New Microsoft.Dynamics.SL.Controls.DSLGrid()
+        Me.txtPercentage_N = New Microsoft.Dynamics.SL.Controls.DSLFloat()
+        Me.lblPercentage_N = New System.Windows.Forms.Label()
+        Me.btnSeleccionar = New System.Windows.Forms.Button()
+        Me.btnDeseleccionar = New System.Windows.Forms.Button()
+        Me.btnIniciarProceso = New System.Windows.Forms.Button()
         CType(Me.Update1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.gvSalesperson, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,6 +75,7 @@
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.chkSeleccionar_N)
         Me.GroupBox1.Controls.Add(Me.txtSalesPersonId_0)
         Me.GroupBox1.Controls.Add(Me.lblSalesPersonID_1)
         Me.GroupBox1.Controls.Add(Me.txtComision_0)
@@ -78,10 +85,22 @@
         Me.GroupBox1.Controls.Add(Me.gvSalesperson)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 39)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(837, 406)
+        Me.GroupBox1.Size = New System.Drawing.Size(760, 406)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
+        '
+        'chkSeleccionar_N
+        '
+        Me.chkSeleccionar_N.FieldName = """bxAMSeleccionar.Seleccionar""; 0; 0; 1"
+        Me.chkSeleccionar_N.Heading = "Seleccionar"
+        Me.chkSeleccionar_N.Level = "NOLEVEL"
+        Me.chkSeleccionar_N.Location = New System.Drawing.Point(66, 168)
+        Me.chkSeleccionar_N.Name = "chkSeleccionar_N"
+        Me.chkSeleccionar_N.Size = New System.Drawing.Size(104, 24)
+        Me.chkSeleccionar_N.TabIndex = 21
+        Me.chkSeleccionar_N.Text = "Seleccionar"
+        Me.chkSeleccionar_N.UseVisualStyleBackColor = True
         '
         'txtSalesPersonId_0
         '
@@ -157,12 +176,64 @@
         Me.gvSalesperson.SetSLDBNav(Me.gvSalesperson, """xSalespersonID_PV_sramirez"", ""bSalesperson.SlsperId""; 0; 0; 0; 1, ")
         Me.gvSalesperson.TabIndex = 0
         '
+        'txtPercentage_N
+        '
+        Me.txtPercentage_N.FieldName = """bxAMPorcentaje.PercentChg""; 0; 2; 8"
+        Me.txtPercentage_N.Level = "NOLEVEL"
+        Me.txtPercentage_N.Location = New System.Drawing.Point(673, 12)
+        Me.txtPercentage_N.Min = 0.0R
+        Me.txtPercentage_N.Name = "txtPercentage_N"
+        Me.txtPercentage_N.Size = New System.Drawing.Size(100, 22)
+        Me.txtPercentage_N.TabIndex = 2
+        Me.txtPercentage_N.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'lblPercentage_N
+        '
+        Me.lblPercentage_N.AutoSize = True
+        Me.lblPercentage_N.Location = New System.Drawing.Point(578, 15)
+        Me.lblPercentage_N.Name = "lblPercentage_N"
+        Me.lblPercentage_N.Size = New System.Drawing.Size(82, 17)
+        Me.lblPercentage_N.TabIndex = 3
+        Me.lblPercentage_N.Text = "Percentage:"
+        '
+        'btnSeleccionar
+        '
+        Me.btnSeleccionar.Location = New System.Drawing.Point(13, 453)
+        Me.btnSeleccionar.Name = "btnSeleccionar"
+        Me.btnSeleccionar.Size = New System.Drawing.Size(170, 23)
+        Me.btnSeleccionar.TabIndex = 4
+        Me.btnSeleccionar.Text = "Seleccionar todo"
+        Me.btnSeleccionar.UseVisualStyleBackColor = True
+        '
+        'btnDeseleccionar
+        '
+        Me.btnDeseleccionar.Location = New System.Drawing.Point(288, 453)
+        Me.btnDeseleccionar.Name = "btnDeseleccionar"
+        Me.btnDeseleccionar.Size = New System.Drawing.Size(170, 23)
+        Me.btnDeseleccionar.TabIndex = 5
+        Me.btnDeseleccionar.Text = "Deseleccionar todo"
+        Me.btnDeseleccionar.UseVisualStyleBackColor = True
+        '
+        'btnIniciarProceso
+        '
+        Me.btnIniciarProceso.Location = New System.Drawing.Point(581, 452)
+        Me.btnIniciarProceso.Name = "btnIniciarProceso"
+        Me.btnIniciarProceso.Size = New System.Drawing.Size(131, 23)
+        Me.btnIniciarProceso.TabIndex = 6
+        Me.btnIniciarProceso.Text = "Iniciar proceso"
+        Me.btnIniciarProceso.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(892, 488)
+        Me.Controls.Add(Me.btnIniciarProceso)
+        Me.Controls.Add(Me.btnDeseleccionar)
+        Me.Controls.Add(Me.btnSeleccionar)
+        Me.Controls.Add(Me.lblPercentage_N)
+        Me.Controls.Add(Me.txtPercentage_N)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Update1)
         Me.Cursor = System.Windows.Forms.Cursors.Default
@@ -176,6 +247,7 @@
         Me.GroupBox1.PerformLayout()
         CType(Me.gvSalesperson, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents SAFHelpProvider As System.Windows.Forms.HelpProvider
@@ -187,5 +259,11 @@
     Friend WithEvents txtName_0 As Microsoft.Dynamics.SL.Controls.DSLMaskedText
     Friend WithEvents lblComision_1 As System.Windows.Forms.Label
     Friend WithEvents lblNombre_1 As System.Windows.Forms.Label
+    Friend WithEvents txtPercentage_N As Microsoft.Dynamics.SL.Controls.DSLFloat
+    Friend WithEvents lblPercentage_N As System.Windows.Forms.Label
+    Friend WithEvents chkSeleccionar_N As Microsoft.Dynamics.SL.Controls.DSLCheck
+    Friend WithEvents btnSeleccionar As System.Windows.Forms.Button
+    Friend WithEvents btnDeseleccionar As System.Windows.Forms.Button
+    Friend WithEvents btnIniciarProceso As System.Windows.Forms.Button
 #End Region
 End Class
